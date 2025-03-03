@@ -57,10 +57,13 @@ GOOGLE_APPLICATION_CREDENTIALS=/ruta/a/tu/archivo-credenciales.json
 
 Para obtener una clave API de SAPTIVA:
 
-1. Regístrate en [SAPTIVA](https://saptiva.com)
-2. Navega a la sección de API Keys en tu perfil
-3. Genera una nueva clave API
-4. Copia la clave que comienza con `va-ai-` y agrégala a tu archivo `.env`
+1. Accede a [SAPTIVA Lab](https://lab.saptiva.com/api/auth/signin)
+2. Inicia sesión con Google
+3. Haz clic en "GET API KEYS"
+4. Crea una nueva clave API dándole un nombre
+5. Copia la clave que comienza con `va-ai-` y agrégala a tu archivo `.env`
+
+Para definir qué modelo utilizar, puedes probar el laboratorio de SAPTIVA para comparar respuestas y parámetros antes de implementarlos en la aplicación.
 
 ### Otras APIs
 
@@ -116,6 +119,7 @@ Si encuentras errores relacionados con la API de SAPTIVA:
 - Verifica que tu clave API comience con `va-ai-`
 - Asegúrate de que la clave esté correctamente configurada en el archivo `.env`
 - Comprueba que la URL de la API sea correcta (`https://api-dev.saptiva.com/v1/chat/completions`)
+- Visita [SAPTIVA Lab](https://lab.saptiva.com) para probar diferentes modelos y parámetros
 
 ### Problemas con la Generación de Publicaciones de LinkedIn
 
