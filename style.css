@@ -1,0 +1,351 @@
+/* Global styles */
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* App container */
+.stApp {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+/* Main title */
+h1 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    margin-bottom: 0.5rem !important;
+    letter-spacing: -0.025em !important;
+}
+
+/* Subtitle */
+.stApp > div:first-child p {
+    color: #4B5563 !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Step header */
+.step-header {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.step-number {
+    background-color: #3B82F6;
+    color: white !important;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 12px;
+    font-size: 1rem;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827 !important;
+}
+
+/* Section header */
+.section-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827 !important;
+    margin: 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+/* Card container */
+.input-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 1.5rem 0 2rem 0;
+}
+
+/* Card styling */
+.input-card {
+    background-color: #F9FAFB !important;
+    border: 2px solid #E5E7EB !important;
+    border-radius: 12px !important;
+    padding: 1.5rem 1rem !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+}
+
+.input-card:hover {
+    background-color: #F3F4F6 !important;
+    border-color: #D1D5DB !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important;
+}
+
+.input-card.selected {
+    background-color: #EFF6FF !important;
+    border-color: #3B82F6 !important;
+    box-shadow: 0 4px 6px rgba(59,130,246,0.1) !important;
+}
+
+.input-card-icon {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem !important;
+    color: #4B5563 !important;
+    transition: all 0.2s ease !important;
+}
+
+.input-card.selected .input-card-icon {
+    color: #3B82F6 !important;
+}
+
+.input-card-title {
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    color: #111827 !important;
+    font-size: 1.1rem !important;
+}
+
+.input-card-description {
+    font-size: 0.9rem !important;
+    color: #6B7280 !important;
+    line-height: 1.4 !important;
+}
+
+/* Input section */
+.input-section {
+    background-color: #F9FAFB !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    margin-top: 1.5rem !important;
+    border: 1px solid #E5E7EB !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+}
+
+.input-section-header {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Text inputs and areas */
+.stTextInput > div > div > input, .stTextArea > div > div > textarea {
+    background-color: white !important;
+    color: #111827 !important;
+    border: 1px solid #D1D5DB !important;
+    border-radius: 8px !important;
+    padding: 0.75rem !important;
+    font-size: 0.95rem !important;
+}
+
+.stTextInput > div > div > input:focus, .stTextArea > div > div > textarea:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.2) !important;
+}
+
+/* Buttons */
+.stButton > button {
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button[kind="primary"] {
+    background-color: #3B82F6 !important;
+    color: white !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: #2563EB !important;
+    box-shadow: 0 4px 6px rgba(37,99,235,0.1) !important;
+}
+
+.stButton > button[kind="secondary"] {
+    border-color: #D1D5DB !important;
+    color: #4B5563 !important;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    border-color: #9CA3AF !important;
+    background-color: #F9FAFB !important;
+}
+
+/* Style the selection buttons to be less prominent */
+[data-testid="stButton"] > button[kind="secondary"] {
+    background-color: transparent;
+    border: none;
+    color: #3B82F6;
+    font-size: 0.8rem;
+    padding: 0.25rem 0;
+    margin-top: 0.5rem;
+}
+
+[data-testid="stButton"] > button[kind="secondary"]:hover {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+/* Article container */
+.article-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+/* Export section header */
+.export-section-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 1.5rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Tab styling */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #F3F4F6;
+    border-radius: 8px 8px 0 0;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #EFF6FF;
+    border-bottom: 2px solid #3B82F6;
+}
+
+/* Code block for copy to clipboard */
+.stCodeBlock {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Ensure all text is visible */
+.stMarkdown, .stMarkdown p, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, 
+.stMarkdown h4, .stMarkdown h5, .stMarkdown h6, .stMarkdown li, .stMarkdown a {
+    color: #111827 !important;
+}
+
+/* Ensure placeholders are visible */
+::placeholder {
+    color: #9CA3AF !important;
+    opacity: 1 !important;
+}
+
+/* File uploader styling */
+.stFileUploader > div > label {
+    background-color: #F9FAFB !important;
+    border: 1px dashed #D1D5DB !important;
+    border-radius: 8px !important;
+    padding: 2rem !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+}
+
+.stFileUploader > div > label:hover {
+    background-color: #F3F4F6 !important;
+    border-color: #9CA3AF !important;
+}
+
+/* Select slider styling */
+.stSlider > div > div > div {
+    background-color: #3B82F6 !important;
+}
+
+.stSlider > div > div > div > div {
+    background-color: #2563EB !important;
+    border-color: #2563EB !important;
+}
+
+/* Expander styling */
+.streamlit-expanderHeader {
+    font-weight: 600 !important;
+    color: #4B5563 !important;
+    background-color: #F9FAFB !important;
+    border-radius: 8px !important;
+}
+
+.streamlit-expanderHeader:hover {
+    color: #111827 !important;
+    background-color: #F3F4F6 !important;
+}
+
+/* Status message styling */
+.stStatus > div {
+    background-color: #F9FAFB !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 8px !important;
+}
+
+.stStatus[data-state="complete"] > div {
+    border-color: #10B981 !important;
+}
+
+.stStatus[data-state="error"] > div {
+    border-color: #EF4444 !important;
+}
+
+/* Sidebar styling */
+[data-testid="stSidebar"] {
+    background-color: #F9FAFB !important;
+    border-right: 1px solid #E5E7EB !important;
+}
+
+[data-testid="stSidebar"] h3 {
+    color: #111827 !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .input-card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .input-card {
+        padding: 1rem !important;
+    }
+    
+    .input-card-icon {
+        font-size: 2rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .input-section {
+        padding: 1rem !important;
+    }
+    
+    .article-container {
+        padding: 1rem !important;
+    }
+} 

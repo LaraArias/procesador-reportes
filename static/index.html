@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Transformer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marked/marked.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-magic"></i> Report Transformer</h1>
+            <p>Transform complex reports into easy-to-understand articles</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="report-input">Paste your report here:</label>
+                    <textarea id="report-input" placeholder="Enter your report text..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="audience-select">Select target audience:</label>
+                    <select id="audience-select">
+                        <option value="general">General Public</option>
+                        <option value="technical">Technical Professionals</option>
+                        <option value="academic">Academic Audience</option>
+                        <option value="business">Business Professionals</option>
+                        <option value="elementary">Elementary School</option>
+                        <option value="high_school">High School</option>
+                    </select>
+                </div>
+
+                <button id="transform-btn" onclick="transformReport()">
+                    <i class="fas fa-wand-magic-sparkles"></i> Transform
+                </button>
+            </div>
+
+            <div class="output-section" id="output-section" style="display: none;">
+                <h2>Transformed Article</h2>
+                <div class="controls">
+                    <button onclick="copyToClipboard()">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                    <button onclick="downloadMarkdown()">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+                <div id="output-content" class="markdown-body"></div>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Transforming your report...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
