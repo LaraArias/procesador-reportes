@@ -65,6 +65,17 @@ Para obtener una clave API de SAPTIVA:
 
 Para definir qué modelo utilizar, puedes probar el laboratorio de SAPTIVA para comparar respuestas y parámetros antes de implementarlos en la aplicación.
 
+### Configuración de la URL de la API de SAPTIVA
+
+La aplicación está configurada para usar la siguiente URL base para la API de SAPTIVA:
+
+```
+URL Base: https://api.saptiva.com/
+Endpoint para chat completions: https://api.saptiva.com/hack
+```
+
+Si estás experimentando problemas, verifica que estas URLs estén correctamente configuradas en el código de la aplicación.
+
 ### Otras APIs
 
 - **OpenAI API**: Se utiliza como fallback si SAPTIVA no está disponible. [Obtener clave](https://platform.openai.com/account/api-keys)
@@ -118,7 +129,9 @@ El contenido transformado puede exportarse como:
 Si encuentras errores relacionados con la API de SAPTIVA:
 - Verifica que tu clave API comience con `va-ai-`
 - Asegúrate de que la clave esté correctamente configurada en el archivo `.env`
-- Comprueba que la URL de la API sea correcta (`https://api-dev.saptiva.com/v1/chat/completions`)
+- Comprueba que la URL de la API sea correcta:
+  - URL Base: `https://api.saptiva.com/`
+  - Endpoint para chat completions: `https://api.saptiva.com/hack`
 - Visita [SAPTIVA Lab](https://lab.saptiva.com) para probar diferentes modelos y parámetros
 
 ### Problemas con la Generación de Publicaciones de LinkedIn
